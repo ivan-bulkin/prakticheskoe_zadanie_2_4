@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prakticheskoe_zadanie_2_4.Controller">
+    <children>
+        <MenuBar prefHeight="505.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Файл">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#doExit" text="Выход">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Помощь">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#doAboutProgramm" text="О программе" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TextField fx:id="enterMessageTextField" alignment="TOP_LEFT" layoutX="28.0" layoutY="375.0" onAction="#doSendMessageButton" prefHeight="20.0" prefWidth="331.0" />
+        <Label layoutX="28.0" layoutY="101.0" prefHeight="44.0" prefWidth="331.0" text="Большое текстовое поле для отображения переписки в центре окна:" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="349.0" prefHeight="20.0" prefWidth="331.0" text="Однострочное текстовое поле для ввода сообщений:" wrapText="true" />
+        <Button fx:id="sendMessageButton" layoutX="28.0" layoutY="407.0" mnemonicParsing="false" onAction="#doSendMessageButton" prefHeight="25.0" prefWidth="331.0" text="Отослать сообщение" textAlignment="CENTER" />
+        <TextArea fx:id="chatTextArea" layoutX="28.0" layoutY="145.0" prefHeight="200.0" prefWidth="331.0" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+    </children>
+</AnchorPane>
